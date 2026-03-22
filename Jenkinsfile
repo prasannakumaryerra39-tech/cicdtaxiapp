@@ -17,7 +17,7 @@ environment {
         stage("build"){
             steps {
                  echo "----------- build started ----------"
-                sh 'mvn package'
+                sh 'mvn clean package'
                  echo "----------- build complted ----------"
             }
         }
@@ -45,7 +45,7 @@ environment {
         stage('Upload WAR to S3') {
             steps {
                 sh '''
-                aws s3 cp target/*.war s3://$S3_BUCKET/
+                aws s3 cp taxi-booking/target/*.war s3://$S3_BUCKET/
                 '''
             }
         }
