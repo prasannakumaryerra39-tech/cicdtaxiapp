@@ -154,7 +154,7 @@ resource "aws_ecr_repository" "app_repo" {
 
 # ANSIBLE
 resource "aws_instance" "ansible" {
-  ami                    = "ami-0030e4319cbf4dbf2"
+  ami                    = "ami-04680790a315cd58d"
   instance_type          = "c7i-flex.large"
   key_name               = "taxi"
   subnet_id              = data.aws_subnets.default.ids[0]
@@ -169,7 +169,7 @@ resource "aws_instance" "ansible" {
 
 # JENKINS MASTER
 resource "aws_instance" "jenkins_master" {
-  ami                    = "ami-0030e4319cbf4dbf2"
+  ami                    = "ami-04680790a315cd58d"
   instance_type          = "c7i-flex.large"
   key_name               = "taxi"
   subnet_id              = data.aws_subnets.default.ids[0]
@@ -184,7 +184,7 @@ resource "aws_instance" "jenkins_master" {
 
 # JENKINS SLAVE
 resource "aws_instance" "jenkins_slave" {
-  ami                    = "ami-0030e4319cbf4dbf2"
+  ami                    = "ami-04680790a315cd58d"
   instance_type          = "c7i-flex.large"
   key_name               = "taxi"
   subnet_id              = data.aws_subnets.default.ids[0]

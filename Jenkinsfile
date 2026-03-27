@@ -9,7 +9,7 @@ environment {
     (SONAR_TOKEN = credentials('SONAR_TOKEN'))
     AWS_REGION = 'us-east-1'
     S3_BUCKET = 'my-war-bucket'
-    ECR_REPO = '642391958117.dkr.ecr.us-east-1.amazonaws.com/taxi-booking-app'
+    ECR_REPO = '763835214696.dkr.ecr.us-east-1.amazonaws.com/taxi-booking-app'
     IMAGE_TAG = "v1.${BUILD_NUMBER}"
     
 }
